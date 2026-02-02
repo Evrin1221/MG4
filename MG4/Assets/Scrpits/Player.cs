@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _jumpForce;
     [SerializeField] private Rigidbody2D _rigidBody;
+    [SerializeField] private AudioSource _flap;
     
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, _jumpForce);
+            _flap.Play();
         }
     }
 }
