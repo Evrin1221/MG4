@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private Rigidbody2D _rigidBody;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +18,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, _jumpForce);
+        }
     }
 }
