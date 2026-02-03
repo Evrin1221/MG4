@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _jumpForce;
     [SerializeField] private Rigidbody2D _rigidBody;
     [SerializeField] private AudioSource _flap;
+    [SerializeField] private AudioSource _die;
     
 
     // Start is called before the first frame update
@@ -31,7 +33,10 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Pipe"))
         {
             Debug.Log("die");
+            _die.Play();
             Time.timeScale = 0f; 
         }
     }
+
+   
 }

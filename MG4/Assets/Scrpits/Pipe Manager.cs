@@ -69,8 +69,8 @@ public class PipeManager : MonoBehaviour
     }
     private void placeThing(GameObject sprite)
     {
-        // IMPORTANT: min then max
-        float tempY = Random.Range(-0.5f, 7.5f);
+     
+        float tempY = Random.Range(_minY, _maxY);
         sprite.transform.position = new Vector2(5f, tempY);
     }
 }
