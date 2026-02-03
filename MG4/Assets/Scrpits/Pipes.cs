@@ -27,6 +27,7 @@ public class Pipes : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("score");
             _onScore?.Invoke();  
         }
 

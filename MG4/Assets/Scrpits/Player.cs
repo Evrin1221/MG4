@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pipe"))
         {
+            Debug.Log("die");
             Time.timeScale = 0f; 
         }
     }
