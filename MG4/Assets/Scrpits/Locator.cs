@@ -18,6 +18,7 @@ public class Locator : MonoBehaviour
         }
         Instance = this;
         GameObject player = GameObject.FindWithTag("Player");
+        _player= player.GetComponent<Player>();
     }
 
     // Update is called once per frame

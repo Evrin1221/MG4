@@ -25,4 +25,12 @@ public class Player : MonoBehaviour
             _flap.Play();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Pipe"))
+        {
+            Time.timeScale = 0f; 
+        }
+    }
 }
